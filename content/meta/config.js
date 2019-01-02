@@ -24,7 +24,7 @@ module.exports = {
   manifestDisplay: "standalone",
 
   /* gravatar */
-  gravatarImgMd5: "http://gravatar.com/avatar/8af55ced886e9ae05831f3fafdf0e495",
+  gravatarImgMd5: "https://secure.gravatar.com/avatar/8af55ced886e9ae05831f3fafdf0e495",
 
   /* social */
   authorSocialLinks: [
