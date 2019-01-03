@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "NDPortmann - .NET / Java / Security", // <title>
   shortSiteTitle: "NDPortmann - .NET / Java / Security", // <title> ending for posts and pages
   siteDescription: "A blog about C#, .NET, Java, InfoSec and Cryptography.",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteUrl: "https://ndportmann.com",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
