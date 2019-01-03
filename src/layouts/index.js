@@ -66,7 +66,6 @@ class Layout extends React.Component {
 
     font.load(null, 10000).then(
       () => {
-        console.log(`${name} is available`);
         this.setState({ [`${name}loaded`]: true });
       },
       () => {
@@ -139,6 +138,14 @@ class Layout extends React.Component {
                         box-sizing: inherit;
                         margin: 0;
                         padding: 0;
+                      }
+                      th, td {
+                        padding: 0.5em;
+                        text-align: left;
+                        border-bottom: 1px solid #ddd;
+                      }
+                      table {
+                        margin-bottom:1.5em;
                       }
                       body {
                         font-family: ${this.state.font400loaded

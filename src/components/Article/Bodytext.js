@@ -41,8 +41,9 @@ const Bodytext = props => {
           :global(li) {
             margin: 0.7em 0;
             line-height: 1.5;
+            font-size: ${theme.font.size.s};
           }
-          :global(a) {
+          :global(a):not(.ant-btn) {
             font-weight: ${theme.font.weight.bold};
             color: ${theme.color.brand.primary};
             text-decoration: underline;
@@ -55,21 +56,41 @@ const Bodytext = props => {
             overflow: hidden;
             border: 1px solid ${theme.line.color};
           }
-          :global(code.language-text) {
+          :global(.gatsby-highlight) {
+            margin: 2.5em -${theme.space.m};
+            :global(pre) {
+              border-radius: 0;
+            }
+          }
+          :global(p > code),
+          :global(li > code) {
             background: ${theme.color.neutral.gray.c};
             text-shadow: none;
             color: inherit;
             padding: 0.1em 0.3em 0.2em;
-            border-radius: 0.1em;
+            border-radius: ${theme.size.radius.tiny};
+          }
+          :global(blockquote) {
+            padding-left: ${theme.space.m};
+            border-left: 5px solid #bbb;
           }
         }
-
         @keyframes bodytextEntry {
           from {
             opacity: 0;
           }
           to {
             opacity: 1;
+          }
+        }
+        @from-width tablet {
+          .bodytext {
+            :global(.gatsby-highlight) {
+              margin: 2.5em 0;
+              :global(pre) {
+                border-radius: ${theme.size.radius.small};
+              }
+            }
           }
         }
       `}</style>

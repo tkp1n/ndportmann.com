@@ -9,7 +9,7 @@ module.exports = {
 
   /* author */
   authorName: "nicolas portmann",
-  authorTwitterAccount: "tkp1n",
+  authorTwitterAccount: "unsafepin",
 
   /* info */
   headerTitle: "Nicolas Portmann",
