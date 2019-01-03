@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/component---src-templates-post-template-js.b6f197430f783b3e67aa.css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style data-href="/app.8b1cc9920e75fff049f7.css">@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:300;src:local("Open Sans Light "),local("Open Sans-Light"),url(/static/open-sans-latin-300-60c866748ff15f5b347fdba64596b1b1.woff2) format("woff2"),url(/static/open-sans-latin-300-521d17bc9f3526c690e8ada6eee55bec.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:300;src:local("Open Sans Light italic"),local("Open Sans-Lightitalic"),url(/static/open-sans-latin-300italic-06bbd3188b34820cd83a0e0b3d0a6f57.woff2) format("woff2"),url(/static/open-sans-latin-300italic-8a648ff38ded89ea15916e84529d62d3.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:400;src:local("Open Sans Regular "),local("Open Sans-Regular"),url(/static/open-sans-latin-400-cffb686d7d2f4682df8342bd4d276e09.woff2) format("woff2"),url(/static/open-sans-latin-400-bf2d0783515b7d75c35bde69e01b3135.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:400;src:local("Open Sans Regular italic"),local("Open Sans-Regularitalic"),url(/static/open-sans-latin-400italic-987032ea5d57c93d8da215678eae3b86.woff2) format("woff2"),url(/static/open-sans-latin-400italic-db70d0b9cb27ada1a260a2b35e756b8b.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:600;src:local("Open Sans SemiBold "),local("Open Sans-SemiBold"),url(/static/open-sans-latin-600-223a277bd88d8a90c8cdf24cda0ad5f5.woff2) format("woff2"),url(/static/open-sans-latin-600-1cd5320f8937d337b61d5117cf9d7b28.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:600;src:local("Open Sans SemiBold italic"),local("Open Sans-SemiBolditalic"),url(/static/open-sans-latin-600italic-4950a7205f0b5cefe41fc03ac346e236.woff2) format("woff2"),url(/static/open-sans-latin-600italic-318ea1ada4102c0704a0637228dcad03.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:700;src:local("Open Sans Bold "),local("Open Sans-Bold"),url(/static/open-sans-latin-700-d08c09f2f169f4a6edbcf8b8d1636cb4.woff2) format("woff2"),url(/static/open-sans-latin-700-623e3205570002af47fc2b88f9335d19.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:700;src:local("Open Sans Bold italic"),local("Open Sans-Bolditalic"),url(/static/open-sans-latin-700italic-c02f5da6e82e1efe0b45841bfd49ce37.woff2) format("woff2"),url(/static/open-sans-latin-700italic-72e19cbb0e38c6773a7751156752cec4.woff) format("woff")}@font-face{font-family:Open Sans;font-style:normal;font-display:swap;font-weight:800;src:local("Open Sans ExtraBold "),local("Open Sans-ExtraBold"),url(/static/open-sans-latin-800-aaeffaf205b9bbb09920089a14dbe9e8.woff2) format("woff2"),url(/static/open-sans-latin-800-c6aa0c4a601fb6ac66f8253fa594dff5.woff) format("woff")}@font-face{font-family:Open Sans;font-style:italic;font-display:swap;font-weight:800;src:local("Open Sans ExtraBold italic"),local("Open Sans-ExtraBolditalic"),url(/static/open-sans-latin-800italic-6b3973ffe02bb6a8be0f8453506ec032.woff2) format("woff2"),url(/static/open-sans-latin-800italic-79b58175343190550489efe46a7f1138.woff) format("woff")}</style><meta name="generator" content="Gatsby 2.0.81"/><style id="__jsx-4192424678">.item.jsx-4192424678,.showItem.jsx-4192424678{background:transparent;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.item.jsx-4192424678 a,.showItem.jsx-4192424678 a{padding:10px;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.item.jsx-4192424678 svg,.showItem.jsx-4192424678 svg{margin:0 5px 0 0;opacity:0.3;}
+.itemList .hideItem{display:none;}
+@media screen and (min-width:1024px){.item.jsx-4192424678 a{color:#3e3e3c;padding:10px;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;border-radius:5px;}.homepage:not(.fixed) .item.jsx-4192424678 a{color:#ffffff;}.item.jsx-4192424678 a:hover{color:#709425;background:rgba(255,255,255,0.4);}.item.jsx-4192424678 svg{-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;}.item.jsx-4192424678:hover svg{fill:#709425;opacity:1;}.hero .item.jsx-4192424678:hover svg svg{fill:green;}.showItem.jsx-4192424678{display:none;}.hiddenItem.jsx-4192424678{text-align:left;padding:5px;}.hiddenItem.jsx-4192424678 a.inHiddenItem{color:#3e3e3c;}.hiddenItem.jsx-4192424678 a.inHiddenItem:hover{color:#709425;}}</style><style id="__jsx-1665230755">.menu.jsx-1665230755{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#ffffff;bottom:0;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-ms-flex-positive:1;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;left:0;max-height:50px;padding:0 10px;position:fixed;width:100%;z-index:1;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;}
+.itemList.jsx-1665230755{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;list-style:none;margin:0;padding:0;position:relative;width:100%;}
+@media screen and (max-width:1023px){.menu.jsx-1665230755::after{position:absolute;content:"";left:20px;right:20px;top:0;height:1px;background:#709425;}.menu.open.jsx-1665230755{padding:20px;}.homepage:not(.fixed) .menu.jsx-1665230755{bottom:-100px;}}
+@media screen and (min-width:1024px){.menu.jsx-1665230755{border-top:none;background:transparent;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;-webkit-box-pack:end;-ms-flex-pack:end;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding-left:50px;-webkit-transition:none;-webkit-transition:none;transition:none;}.itemList.jsx-1665230755{-webkit-box-pack:end;-ms-flex-pack:end;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding:0;}.hiddenItemList.jsx-1665230755{list-style:none;margin:0;position:absolute;background:#ffffff;border:1px solid #ecebea;top:48px;right:10px;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;padding:20px;border-radius:5px;border-top-right-radius:0;}.hiddenItemList.jsx-1665230755:after{content:"";background:#ffffff;z-index:10;top:-10px;right:-1px;width:44px;height:10px;position:absolute;border-left:1px solid #ecebea;border-right:1px solid #ecebea;}.homepage:not(.fixed) .hiddenItemList.jsx-1665230755{border:1px solid transparent;background:rgba(255,255,255,0.9);top:50px;}.homepage:not(.fixed) .hiddenItemList.jsx-1665230755:after{top:-11px;border-left:1px solid transparent;border-right:1px solid transparent;background:rgba(255,255,255,0.9);}.fixed .hiddenItemList.jsx-1665230755{top:44px;}}</style><style id="__jsx-768897745">.header.jsx-768897745{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#ffffff;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:80px;position:relative;top:0;width:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.header.jsx-768897745 a.logoType{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:"column";-webkit-flex-direction:"column";-ms-flex-direction:"column";flex-direction:"column";color:#3e3e3c;}
+.header.jsx-768897745 a.logoType .logo.jsx-768897745{-ms-flex-negative:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}
+.header.homepage.jsx-768897745{position:absolute;background-color:transparent;height:100px;;}
+h1.jsx-768897745{font-size:1.35em;font-weight:400;margin:0 0 5px 0;}
+h2.jsx-768897745{font-weight:400;font-size:.8em;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;margin:0;}
+.logo.jsx-768897745{border-radius:65% 75%;border:1px solid #eee;display:inline-block;height:44px;margin:0 20px 0 0;overflow:hidden;width:44px;-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;}
+.homepage.jsx-768897745 .logo.jsx-768897745{height:60px;width:60px;}
+.logo.jsx-768897745 img.jsx-768897745{width:100%;}
+.sensor.jsx-768897745{display:block;position:absolute;bottom:0;z-index:1;left:0;right:0;height:1px;top:80px;}
+@media screen and (min-width:600px){.header.jsx-768897745{padding:40px;}.header.homepage.jsx-768897745{height:100px;;}}
+@media screen and (max-width:1023px){.header.homepage.jsx-768897745 .logo.jsx-768897745{border:none;}.header.homepage.jsx-768897745 a.logoType,.header.homepage.jsx-768897745 h1.jsx-768897745{color:#ffffff;}.header.homepage.jsx-768897745 h2.jsx-768897745{color:#dddbda;}}
+@media screen and (min-width:1024px){.header.jsx-768897745{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#ffffff;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;top:0;width:100%;-webkit-box-pack:justify;-ms-flex-pack:justify;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-transition:padding 0.5s;-webkit-transition:padding 0.5s;transition:padding 0.5s;}.header.fixed.jsx-768897745{height:50px;;background-color:#ffffff;left:0;padding:0 20px;position:fixed;top:0;width:100%;z-index:1;}.header.fixed.jsx-768897745 h1.jsx-768897745{margin:0 0 2px 0;}.header.fixed.jsx-768897745 h2.jsx-768897745{display:none;}.header.homepage.jsx-768897745:not(.fixed) a.logoType,.header.homepage.jsx-768897745:not(.fixed) h1.jsx-768897745{color:#ffffff;}.header.homepage.jsx-768897745:not(.fixed) h2.jsx-768897745{color:#dddbda;}.header.jsx-768897745 a.logoType{text-align:left;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-ms-flex-negative:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:auto;}.logo.jsx-768897745{margin:0 20px 0 0;}.fixed.jsx-768897745 .logo.jsx-768897745{height:36px;width:36px;}.header.homepage.jsx-768897745:not(.fixed) .logo.jsx-768897745{border:none;}h2.jsx-768897745{-webkit-animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-duration:0.5s;-webkit-animation-name:h2Entry;-webkit-animation-name:h2Entry-jsx-768897745;animation-name:h2Entry-jsx-768897745;}@-webkit-keyframes h2Entry{from.jsx-768897745{opacity:0;}to.jsx-768897745{opacity:1;}}@-webkit-keyframes h2Entry-jsx-768897745{from{opacity:0;}to{opacity:1;}}@keyframes h2Entry-jsx-768897745{from{opacity:0;}to{opacity:1;}}}</style><style id="__jsx-2542452449">h1.jsx-2542452449{font-size:2.2em;margin:0 0 40px 0;-webkit-animation-name:headlineEntry;-webkit-animation-name:headlineEntry-jsx-2542452449;animation-name:headlineEntry-jsx-2542452449;-webkit-animation-duration:1s;-webkit-animation-duration:1s;animation-duration:1s;}
+h1.jsx-2542452449 span{font-weight:400;display:block;font-size:0.5em;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;margin:0 0 5px 0;}
+h1.jsx-2542452449 svg{height:0.75em;fill:#709425;}
+@-webkit-keyframes headlineEntry{from.jsx-2542452449{opacity:0.5;}to.jsx-2542452449{opacity:1;}}
+@-webkit-keyframes headlineEntry-jsx-2542452449{from{opacity:0.5;}to{opacity:1;}}
+@keyframes headlineEntry-jsx-2542452449{from{opacity:0.5;}to{opacity:1;}}
+@media screen and (min-width:600px){h1.jsx-2542452449{font-size:calc(2em * 1.2);}}
+@media screen and (min-width:1024px){h1.jsx-2542452449{font-size:calc(2em * 1.4);}}</style><style id="__jsx-2703193364">.meta.jsx-2703193364{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;font-size:0.8em;margin:20px 0;background:transparent;}
+.meta.jsx-2703193364 svg{fill:#709425;margin:0 5px 0 0;}
+.meta.jsx-2703193364 span.jsx-2703193364{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-transform:uppercase;margin:5px 10px 5px 0;}
+@media screen and (min-width:600px){.meta.jsx-2703193364{margin:calc(20px * 1.5) 0 20px;}}</style><style id="__jsx-4220289274">.bodytext.jsx-4220289274{-webkit-animation-name:bodytextEntry;-webkit-animation-name:bodytextEntry-jsx-4220289274;animation-name:bodytextEntry-jsx-4220289274;-webkit-animation-duration:1s;-webkit-animation-duration:1s;animation-duration:1s;}
+.bodytext.jsx-4220289274 h2,.bodytext.jsx-4220289274 h3{margin:1.5em 0 1em;}
+.bodytext.jsx-4220289274 h2{line-height:1.2;font-size:1.7em;}
+.bodytext.jsx-4220289274 h3{font-size:1.35em;line-height:1.3;}
+.bodytext.jsx-4220289274 p{font-size:1.1em;line-height:1.6;margin:0 0 1.5em;}
+.bodytext.jsx-4220289274 ul{list-style:circle;margin:0 0 1.5em;padding:0 0 0 1.5em;}
+.bodytext.jsx-4220289274 li{margin:0.7em 0;line-height:1.5;font-size:1.1em;}
+.bodytext.jsx-4220289274 a:not(.ant-btn){font-weight:600;color:#709425;-webkit-text-decoration:underline;text-decoration:underline;}
+.bodytext.jsx-4220289274 a.gatsby-resp-image-link{border:0;display:block;margin:2.5em 0;border-radius:10px;overflow:hidden;border:1px solid #ecebea;}
+.bodytext.jsx-4220289274 .gatsby-highlight{margin:2.5em -20px;}
+.bodytext.jsx-4220289274 .gatsby-highlight pre{border-radius:0;}
+.bodytext.jsx-4220289274 p > code,.bodytext.jsx-4220289274 li > code{background:#ecebea;text-shadow:none;color:inherit;padding:0.1em 0.3em 0.2em;border-radius:undefined;}
+.bodytext.jsx-4220289274 blockquote{padding-left:20px;border-left:5px solid #bbb;}
+@-webkit-keyframes bodytextEntry{from.jsx-4220289274{opacity:0;}to.jsx-4220289274{opacity:1;}}
+@-webkit-keyframes bodytextEntry-jsx-4220289274{from{opacity:0;}to{opacity:1;}}
+@keyframes bodytextEntry-jsx-4220289274{from{opacity:0;}to{opacity:1;}}
+@media screen and (min-width:600px){.bodytext.jsx-4220289274 .gatsby-highlight{margin:2.5em 0;}.bodytext.jsx-4220289274 .gatsby-highlight pre{border-radius:5px;}}</style><style id="__jsx-646394116">.author.jsx-646394116{margin:40px 0;padding:40px 0;border-top:1px solid #ecebea;border-bottom:1px solid #ecebea;}
+.avatar.jsx-646394116{float:left;border-radius:65% 75%;border:1px solid #ecebea;display:inline-block;height:50px;margin:5px 20px 0 0;overflow:hidden;width:50px;}
+.avatar.jsx-646394116 img.jsx-646394116{width:100%;}
+.note.jsx-646394116{font-size:0.9em;line-height:1.6;}
+@media screen and (min-width:600px){.author.jsx-646394116{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.avatar.jsx-646394116{-webkit-box-flex:0;-ms-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;}}</style><style id="__jsx-126278577">.links.jsx-126278577{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:0 20px 40px;border-bottom:1px solid #ecebea;margin:0 0 40px 0;}
+.links.jsx-126278577 a{display:-webkit-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.links.jsx-126278577 a:nth-child(2){margin:20px 0 0;}
+.links.jsx-126278577 svg{fill:orange;width:20px;height:20px;-ms-flex-negative:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-box-flex:0;-ms-flex-positive:0;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;margin:0 20px 0 0;}
+h4.jsx-126278577{font-weight:600;margin:0;font-size:1.1em;}
+time.jsx-126278577{color:#969492;display:block;font-weight:400;font-size:0.8em;margin-top:0.5em;}
+@media screen and (min-width:1024px){.links.jsx-126278577{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.links.jsx-126278577 a{-ms-flex-preferred-size:50%;-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;}.links.jsx-126278577 a:nth-child(2){margin:0;}.links.jsx-126278577 svg{-webkit-transition:all 0.5s;-webkit-transition:all 0.5s;transition:all 0.5s;margin:0 10px 0 0;}@media (hover:hover){.links.jsx-126278577 a:hover svg{-webkit-transform:scale(1.5);-webkit-transform:scale(1.5);-ms-transform:scale(1.5);transform:scale(1.5);}}}</style><style id="__jsx-1766939654">.article.jsx-1766939654{padding:20px;margin:0 auto;}
+@media screen and (min-width:600px){.article.jsx-1766939654{padding:calc(20px) calc(20px * 2);max-width:650px;}}
+@media screen and (min-width:1024px){.article.jsx-1766939654{padding:calc(20px * 2 + 90px) 0 calc(20px * 2);max-width:700px;}}</style><style id="__jsx-2344609357">.footer.jsx-2344609357{background:#ffffff;padding:20px;padding-top:0;padding-bottom:120px;}
+.footer.jsx-2344609357 ul{list-style:none;text-align:center;padding:0;}
+.footer.jsx-2344609357 ul li{color:#969492;font-size:.8em;padding:2px 10px;position:relative;display:inline-block;}
+.footer.jsx-2344609357 ul li::after{content:"•";position:absolute;right:calc(5px * -1);}
+.footer.jsx-2344609357 ul li:last-child::after{content:"";}
+@media screen and (min-width:1024px){.footer.jsx-2344609357{padding:0 1em 1.5em;}}</style><style id="__jsx-3017011455">main.jsx-3017011455{min-height:80vh;}</style><style id="__jsx-2874191369">html{-webkit-box-sizing:border-box;box-sizing:border-box;}
+*,*:after,*:before{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0;}
+th,td{padding:0.5em;text-align:left;border-bottom:1px solid #ddd;}
+table{margin-bottom:1.5em;}
+body{font-family:Arial, sans-serif;;}
+h1,h2,h3{font-weight:400;line-height:1.1;-webkit-letter-spacing:-0.03em;-moz-letter-spacing:-0.03em;-ms-letter-spacing:-0.03em;letter-spacing:-0.03em;margin:0;}
+h1{-webkit-letter-spacing:-0.04em;-moz-letter-spacing:-0.04em;-ms-letter-spacing:-0.04em;letter-spacing:-0.04em;}
+p{margin:0;}
+strong{font-weight:400;}
+a{-webkit-text-decoration:none;text-decoration:none;color:#666;}
+main{width:auto;display:block;}</style><title data-react-helmet="true">Exploring System.Threading.Channels - NDPortmann - .NET / Java / Security</title><meta data-react-helmet="true" name="description" content="A blog about C#, .NET, Java, InfoSec and Cryptography."/><meta data-react-helmet="true" property="og:url" content="https://ndportmann.com/system-threading-channels/"/><meta data-react-helmet="true" property="og:title" content="Exploring System.Threading.Channels - NDPortmann - .NET / Java / Security"/><meta data-react-helmet="true" property="og:description" content="A blog about C#, .NET, Java, InfoSec and Cryptography."/><meta data-react-helmet="true" property="og:image" content="https://ndportmann.com/static/7c12a7cd63ae9058b48404a34b9b89d0/ada8c/chuttersnap-317196-unsplash.jpeg"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="unsafepin"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#666"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-6e5c0af5cf1ae48a0d7a.js"/><link as="script" rel="preload" href="/app-64805dc1209e53a6e2bb.js"/><link as="script" rel="preload" href="/0-1ec89199b094b9bab5df.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-df8ad053e0d7cf4bd966.js"/><link as="fetch" rel="preload" href="/static/d/804/path---system-threading-channels-aed-774-yaJa1PCXYrXIkEY3rTZ1KvB28Yg.json" crossOrigin="use-credentials"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8"/><meta name="apple-mobile-web-app-title" content="Lazywill"/><link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57"/><link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60"/><link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72"/><link rel="apple-touch-icon" href="/icons/apple-icon-76x76.png" sizes="76x76"/><link rel="apple-touch-icon" href="/icons/apple-icon-114x114.png" sizes="114x114"/><link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" sizes="120x120"/><link rel="apple-touch-icon" href="/icons/apple-icon-144x144.png" sizes="144x144"/><link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" sizes="152x152"/><link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180"/><link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><header class="jsx-768897745 header  "><a class="logoType" href="/"><div class="jsx-768897745 logo"><img src="https://secure.gravatar.com/avatar/8af55ced886e9ae05831f3fafdf0e495" alt="NDPortmann - .NET / Java / Security" class="jsx-768897745"/></div><div class="jsx-768897745 type"><h1 class="jsx-768897745">Nicolas Portmann</h1><h2 class="jsx-768897745">C#, .NET, Java, InfoSec, Cryptography</h2></div></a><nav rel="js-menu" class="jsx-1665230755 menu "><ul class="jsx-1665230755 itemList"><li class="jsx-4192424678 item"><a class="" data-slug="/" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"><path d="M488 312.7V456c0 13.3-10.7 24-24 24H348c-6.6 0-12-5.4-12-12V356c0-6.6-5.4-12-12-12h-72c-6.6 0-12 5.4-12 12v112c0 6.6-5.4 12-12 12H112c-13.3 0-24-10.7-24-24V312.7c0-3.6 1.6-7 4.4-9.3l188-154.8c4.4-3.6 10.8-3.6 15.3 0l188 154.8c2.7 2.3 4.3 5.7 4.3 9.3zm83.6-60.9L488 182.9V44.4c0-6.6-5.4-12-12-12h-56c-6.6 0-12 5.4-12 12V117l-89.5-73.7c-17.7-14.6-43.3-14.6-61 0L4.4 251.8c-5.1 4.2-5.8 11.8-1.6 16.9l25.5 31c4.2 5.1 11.8 5.8 16.9 1.6l235.2-193.7c4.4-3.6 10.8-3.6 15.3 0l235.2 193.7c5.1 4.2 12.7 3.5 16.9-1.6l25.5-31c4.2-5.2 3.4-12.7-1.7-16.9z"></path></svg> <!-- -->Home</a></li><li class="jsx-4192424678 item"><a class="" data-slug="/category/" href="/category/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg> <!-- -->Categories</a></li><li class="jsx-4192424678 item"><a class="" data-slug="/about/" href="/about/"> <!-- -->About</a></li></ul></nav></header><div class="jsx-768897745 sensor"></div><main class="jsx-3017011455 jsx-2874191369"><article class="jsx-1766939654 article"><header><h1 class="jsx-2542452449">Exploring System.Threading.Channels</h1><p class="jsx-2703193364 meta"><span class="jsx-2703193364"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" size="18" height="18" width="18"><path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"></path></svg> <!-- -->2017-10-21</span><span class="jsx-2703193364"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" size="18" height="18" width="18"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg> <!-- -->nicolas portmann</span><span class="jsx-2703193364"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" size="18" height="18" width="18"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"></path></svg><a href="/category/dotnet">dotnet</a></span></p></header><div class="jsx-4220289274 bodytext"><p>The <code class="language-text">System.Threading.Channels</code> namespace provides data structures (stores) for pub/sub scenarios. It enables you to decouple one-to-many publishers from one-to-many subscribers just as its equally named counterpart from <a href="https://tour.golang.org/concurrency/2">go</a>.</p>
+<p>At first glance, this might look similar to the functionality provided by <code class="language-text">BufferBlock&lt;T&gt;</code> from <code class="language-text">System.Threading.Task.Dataflow</code>. <code class="language-text">Channels</code>, however, are a more low-level primitive upon which libraries such as <code class="language-text">Dataflow</code> can be built. If <code class="language-text">Dataflow</code> was still in development today, it would most certainly be based on <code class="language-text">Channels</code> to some extent.</p>
+<h2>Bounded vs. Unbounded Channels</h2>
+<p>Channels are created using the static factory methods of the <code class="language-text">Channel</code> class.
+The type parameter <code class="language-text">T</code> is used to identify the type of object that can be passed from a publisher to a subscriber via the created <code class="language-text">Channel</code>.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> Channel<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token generic-method"><span class="token function">CreateBounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">int</span> capacity<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Channel<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token generic-method"><span class="token function">CreateBounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token class-name">BoundedChannelOptions</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Channel<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token generic-method"><span class="token function">CreateUnbounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> Channel<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token generic-method"><span class="token function">CreateUnbounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token class-name">UnboundedChannelOptions</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre></div>
+<p>Using <code class="language-text">CreateUnbounded</code> creates a channel that can accept an infinite amount of messages - given an endless amount of memory of course. The unbounded channel variant is more performant than its bounded counterpart in almost every benchmark (see below). This win in performance comes at the cost of potentially running out of memory. If you can externally guarantee, that the channel never contains more then a certain amount of pending objects, using an unbounded channel is profitable. Otherwise, it is more secure to rely on bounded channels.</p>
+<p>Bounded channels operate in one of four <code class="language-text">FullMode</code>s, which can be set via the options parameter to the <code class="language-text">CreateBounded</code> factory method.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">Channel<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">CreateBounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BoundedChannelOptions</span><span class="token punctuation">(</span>capacity<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    FullMode <span class="token operator">=</span> BoundedChannelFullMode<span class="token punctuation">.</span>Wait
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>The four supported <code class="language-text">FullMode</code>s are:</p>
+<ul>
+<li><code class="language-text">Wait</code> - Wait for space to be available in order to complete the write operation.</li>
+<li><code class="language-text">DropNewest</code> - Remove and ignore the newest item in the channel in order to make room for the item being written.</li>
+<li><code class="language-text">DropOldest</code> - Remove and ignore the oldest item in the channel in order to make room for the item being written.</li>
+<li><code class="language-text">DropWrite</code> - Drop the item being written.</li>
+</ul>
+<p>Be aware that the most convenient option <code class="language-text">Wait</code> might also cause memory issues, as each asynchronously ‘waiting’ producer requires memory as well.</p>
+<h2>Publisher / Subscriber cardinality</h2>
+<p>Channels are assumingly used to coordinate one publisher with the computing power of multiple subscribers, or to fit the work of multiple producers through the bottleneck of a single consumer. It is however also possible to model multi-publisher / multi-subscriber or single-publisher / single-subscriber scenarios using channels.</p>
+<p>To notify the factory methods of the specific scenario at hand, two properties on both the <code class="language-text">Unbounded</code>- and the <code class="language-text">BoundedChannelOptions</code> can be set accordingly.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">Channel<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">CreateUnbounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">UnboundedChannelOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    SingleWriter <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">,</span>
+    SingleReader <span class="token operator">=</span> <span class="token keyword">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>The documentation for those two properties indicates, that specific optimizations may be unlocked if the channel knowns about the single-reader or single-writer guarantee. This information is currently used to determine the appropriate <code class="language-text">Channel</code> implementation for the given circumstances. The CoreFX repository contains three implementations of the abstract <code class="language-text">Channel&lt;T&gt;</code> class; a bounded Channel, a single-reader and a multi-reader unbounded channel. Unless specifying a single-consumer scenario to the unbounded channel factory, there is currently no effect in setting those properties. It is nevertheless considered best-practice, as more optimizations might be added in the future.</p>
+<h2>Synchronous Continuations</h2>
+<p>You may have heard of <code class="language-text">TaskCreationOptions.RunContinuationsAsynchronously</code> which was added in .NET Framework 4.6. It forces continuations of tasks to be executed asynchronously (e.g., on the thread pool). The critical thing to note here is that this behavior is not the default. In other words, continuations are executed synchronously per default by the thread that provides the result of a task (e.g., executes <code class="language-text">TrySetResult</code> on the <code class="language-text">TaskCompletionSource</code>). Synchronous execution typically helps with performance but may trigger nasty deadlocks, as developers may not be aware of which thread is executing the continuations.</p>
+<p>With <code class="language-text">Channels</code>, this default changed. Not globally of course, but for continuations registered inside the <code class="language-text">Channel</code>. Asynchronous execution ensures, that a producer thread does not end up doing consumer work when executing a continuation synchronously. If you are sure, that this added safety is not necessary in your specific use case, it can be turned off using another boolean property in the <code class="language-text">Channel</code>s options, which defaults to false. Doing so most likely increases throughput but reduces concurrency.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">Channel<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">CreateUnbounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">UnboundedChannelOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    AllowSynchronousContinuations <span class="token operator">=</span> <span class="token keyword">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h2>Interacting with Channels</h2>
+<p><code class="language-text">Channel</code> (much as the <code class="language-text">IDuplexPipe</code> interface from <code class="language-text">System.IO.Pipelines</code>) exposes two properties. A <code class="language-text">ChannelReader</code> and a <code class="language-text">ChannelWriter</code>.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">Channel<span class="token operator">&lt;</span>T<span class="token operator">></span> channel <span class="token operator">=</span> Channel<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">CreateUnbounded</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ChannelReader<span class="token operator">&lt;</span>T<span class="token operator">></span> reader <span class="token operator">=</span> channel<span class="token punctuation">.</span>Reader<span class="token punctuation">;</span>
+ChannelWriter<span class="token operator">&lt;</span>T<span class="token operator">></span> writer <span class="token operator">=</span> channel<span class="token punctuation">.</span>Writer<span class="token punctuation">;</span></code></pre></div>
+<p>The <code class="language-text">ChannelReader</code> and the <code class="language-text">ChannelWriter</code> feature a very symmetrical API (optional parameters removed for brevity):</p>
+<table>
+<thead>
+<tr>
+<th>ChannelReader</th>
+<th>ChannelWriter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">bool TryRead(out T item)</code></td>
+<td><code class="language-text">bool TryWrite(T item)</code></td>
+</tr>
+<tr>
+<td><code class="language-text">ValueTask&lt;T&gt; ReadAsync()</code></td>
+<td><code class="language-text">ValueTask WriteAsync(T item)</code></td>
+</tr>
+<tr>
+<td><code class="language-text">ValueTask&lt;bool&gt; WaitToReadAsync()</code></td>
+<td><code class="language-text">ValueTask&lt;bool&gt; WaitToWriteAsync()</code></td>
+</tr>
+<tr>
+<td><code class="language-text">Task Completion</code></td>
+<td><code class="language-text">bool TryComplete()</code>, <code class="language-text">void Complete()</code></td>
+</tr>
+</tbody>
+</table>
+<p>It is obvious that the <code class="language-text">ChannelWriter</code> can be used to write (publish) objects to the <code class="language-text">Channel</code>, whereas the <code class="language-text">ChannelReader</code> can be used to read (consume) them. It is also obvious that the writing side is in control of the completion of the <code class="language-text">Channel</code>, while the readers can only observe the writers decision (e.g., via the <code class="language-text">Completion</code> Task that completes, when the channel completes).</p>
+<h3>TryRead / TryWrite</h3>
+<p>These synchronous methods may be used to optimistically and synchronously read from or write to a <code class="language-text">Channel</code>. (Note that writing synchronously to an unbounded <code class="language-text">Channel</code> always succeeds unless the channel is closed.) This is typically used to avoid going asynchronous via the following pattern:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token class-name">ValueTask</span> <span class="token function">PublishAsync</span><span class="token punctuation">(</span><span class="token class-name">T</span> item<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">AsyncSlowPath</span><span class="token punctuation">(</span><span class="token class-name">T</span> thing<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">await</span> channel<span class="token punctuation">.</span><span class="token function">WriteAsync</span><span class="token punctuation">(</span>thing<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> channel<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token keyword">default</span> <span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">ValueTask</span><span class="token punctuation">(</span><span class="token function">AsyncSlowPath</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>ReadAsync / WriteAsync</h3>
+<p>As indicated above, those two methods are the asynchronous counterparts to <code class="language-text">TryRead</code> and <code class="language-text">TryWrite</code>. The critical thing to note here is that both methods throw a <code class="language-text">ChannelClosedException</code> (possibly containing an inner exception if one was passed as a parameter to <code class="language-text">TryComplete</code> or <code class="language-text">Complete</code>) if the <code class="language-text">Channel</code> is completed during the operation. If you can live with a <code class="language-text">try</code>/<code class="language-text">catch</code>-block or externally guarantee, that the channel will not be completed during reads or writes, these two methods are for you. Otherwise, the next pair of methods offers an elegant alternative.</p>
+<h3>WaitToReadAsync / WaitToWriteAsync</h3>
+<p><code class="language-text">WaitToReadAsync</code> and <code class="language-text">WaitToWriteAsyn</code> allow you to wait asynchronously until the <code class="language-text">Channel</code> becomes readable/writable again. Note, that there is no guarantee, that the <code class="language-text">Channel</code> will stay readable/writable, until you acutally read from / write to it. Both methods will not throw an exception if the channel is completed during the operation (unless you provide an exception to TryComplete or Complete, see below). In this case, they will simply return false. An appropriate usage pattern may be the following. In the case of an exception, it will not be wrapped in a <code class="language-text">ChannelClosedException</code> (as with <code class="language-text">ReadAsync</code> / <code class="language-text">WriteAsync</code>) but thrown directly.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> ValueTask<span class="token operator">&lt;</span><span class="token keyword">bool</span><span class="token operator">></span> <span class="token function">PublishAsync</span><span class="token punctuation">(</span><span class="token class-name">T</span> item<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">async</span> Task<span class="token operator">&lt;</span><span class="token keyword">bool</span><span class="token operator">></span> <span class="token function">AsyncSlowPath</span><span class="token punctuation">(</span><span class="token class-name">T</span> thing<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">await</span> channel<span class="token punctuation">.</span><span class="token function">WaitToWriteAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>channel<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>thing<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">false</span><span class="token punctuation">;</span> <span class="token comment">// Channel was completed during the wait</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> channel<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token keyword">new</span> <span class="token generic-method"><span class="token function">ValueTask</span><span class="token punctuation">&lt;</span><span class="token keyword">bool</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token keyword">true</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token generic-method"><span class="token function">ValueTask</span><span class="token punctuation">&lt;</span><span class="token keyword">bool</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token function">AsyncSlowPath</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Note that <code class="language-text">TryWrite</code> is now executed in a while-loop, as the <code class="language-text">Channel</code> may no longer be writeable once we get to actually writing to it.</p>
+<h3>Completion / TryComplete / Complete</h3>
+<p>On the reader side, <code class="language-text">Completion</code> can be used to execute code after the channel has been completed. This can be achieved by either awaiting the <code class="language-text">Task</code> or by registering a continuation using <code class="language-text">ContinueWith</code>. Another option for the reader is to query whether the channel is still active by calling <code class="language-text">!channel.Completion.IsCompleted</code>. Note however that this information might already be outdated, one queried.</p>
+<p>As already mentioned, the writing side is in control of <code class="language-text">Channel</code> completion. Publishers can call <code class="language-text">TryComplete</code> or <code class="language-text">Complete</code> without parameter to indicate normal completion, or pass in an <code class="language-text">Exception</code> to indicate completion due to an error. The only difference between <code class="language-text">TryComplete</code> and <code class="language-text">Complete</code> is that the latter will throw a <code class="language-text">ChannelClosedException</code> if the channel is already closed, while to former will just return <code class="language-text">false</code> in this case.</p>
+<h3>Usage patterns</h3>
+<p>The following text and usage patterns were taken from or inspired by the partially outdated <a href="https://github.com/dotnet/corefxlab/blob/31d98a89d2e38f786303bf1e9f8ba4cf5b203b0f/src/System.Threading.Tasks.Channels/README.md#example-producerconsumer-patterns">REDAME</a> from Stephen Toub. I took the liberty of updating them as the API has slightly changed since its corefxlab days.</p>
+<h4>Producer patterns</h4>
+<p>The simplest way to produce a bunch of numbers and complete might look like this:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">ProduceRange</span><span class="token punctuation">(</span>ChannelWriter<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WriteAsync</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    c<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>If the <code class="language-text">Channel</code> is expected to be unbounded or the need to wait unlikely, the loop may be optimized using <code class="language-text">TryWrite</code> as indicated earlier:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">ProduceRange</span><span class="token punctuation">(</span>ChannelWriter<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WriteAsync</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    c<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>If returning a <code class="language-text">ValueTask</code> is an option, going async can be avoided altogether if all writes complete synchronously with:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">ValueTask</span> <span class="token function">ProduceRange</span><span class="token punctuation">(</span>ChannelWriter<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ValueTask</span><span class="token punctuation">(</span><span class="token function">FinishProducingRange</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> i<span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    c<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">default</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">FinishProducingRangeAsync</span><span class="token punctuation">(</span>ChannelWriter<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> current<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> current<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WriteAsync</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    c<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>If you are uncertain, whether the <code class="language-text">Channel</code> may be closed during the operation, the following pattern provides a more secure approach:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">ProduceRange</span><span class="token punctuation">(</span>ChannelWriter<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WaitForWriteAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    c<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>And if it’s expected that most writers will succeed synchronously, it may be advantageous to also loop on the <code class="language-text">TryWrite</code>, e.g:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">ProduceRange</span><span class="token punctuation">(</span>ChannelWriter<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> count <span class="token operator">&amp;&amp;</span> <span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WaitForWriteAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> count <span class="token operator">&amp;&amp;</span> c<span class="token punctuation">.</span><span class="token function">TryWrite</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> i<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    c<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>The implementation of the variant that may return synchronously without allocating a Task is left as an exercise to the reader.</p>
+<h4>Consumer patterns</h4>
+<p>On the consuming end, there are similarly multiple ways to consume a channel. Which one is chosen will depend on the exact needs of the situation. A simple read-loop may look like this:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">Consume</span><span class="token punctuation">(</span>ChannelReader<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">try</span>
+    <span class="token punctuation">{</span>
+         <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">true</span><span class="token punctuation">)</span>
+         <span class="token punctuation">{</span>
+             <span class="token keyword">int</span> item <span class="token operator">=</span> <span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">ReadAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+             <span class="token comment">// process item...</span>
+         <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ChannelClosedException</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">WaitForReadAsync</code> and <code class="language-text">TryRead</code> may also be used. This avoids the use of an exception to indicate if/when the channel has been closed, e.g.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">Consume</span><span class="token punctuation">(</span>ChannelReader<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WaitForReadAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">TryRead</span><span class="token punctuation">(</span><span class="token keyword">out</span> <span class="token keyword">int</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+             <span class="token comment">// process item...</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>As with the writing example, if it’s expected that waiting is relatively rare, a nested loop can be used to optimize for reads by looping over TryRead as well:</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token class-name">Task</span> <span class="token function">Consume</span><span class="token punctuation">(</span>ChannelReader<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> c<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">await</span> c<span class="token punctuation">.</span><span class="token function">WaitForReadAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">TryRead</span><span class="token punctuation">(</span><span class="token keyword">out</span> <span class="token keyword">int</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2>Summary</h2>
+<p>System.Threading.Channels is a highly versatile library to orchestrate pub/sub scenarios in the .NET universe asynchronously.
+It is fast enough, to dispatch 1 million messages in well under a second in most usage scenarios and does not block any thread while doing so. It’s less scalable, blocking community counterpart <a href="https://github.com/disruptor-net/Disruptor-net">Disruptor-net</a> is up to an order of magnitude faster in some scenarios (compare the benchmarks below with their <a href="https://github.com/disruptor-net/Disruptor-net/wiki/Performance-Results">performance results</a>).
+I am currently using Channels to sequence the writes of multiple producers to a single <code class="language-text">PipeWriter</code> (from <code class="language-text">System.IO.Pipelines</code>), avoiding some calls to <code class="language-text">pipeWriter.FlushAsync</code> if <code class="language-text">channel.TryRead</code> returns true multiple times.</p>
+<h2>Benchmarks</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Pub/Sub count</th>
+<th>SyncCont.</th>
+<th align="right">Mean</th>
+<th align="right">Median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>10/10</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>778.8 ms</strong></td>
+<td align="right"><strong>762.7 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>10/10</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>387.0 ms</strong></td>
+<td align="right"><strong>378.7 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>10/1</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>524.7 ms</strong></td>
+<td align="right"><strong>488.7 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>10/1</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>372.0 ms</strong></td>
+<td align="right"><strong>354.6 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>1/10</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>2,254.3 ms</strong></td>
+<td align="right"><strong>2,287.6 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>1/10</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>179.9 ms</strong></td>
+<td align="right"><strong>177.4 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>1/1</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>492.7 ms</strong></td>
+<td align="right"><strong>503.1 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>1/1</strong></td>
+<td><strong>False</strong></td>
+<td align="right"><strong>289.3 ms</strong></td>
+<td align="right"><strong>291.1 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>10/10</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>745.1 ms</strong></td>
+<td align="right"><strong>749.9 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>10/10</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>508.6 ms</strong></td>
+<td align="right"><strong>524.4 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>10/1</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>625.8 ms</strong></td>
+<td align="right"><strong>594.7 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>10/1</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>381.4 ms</strong></td>
+<td align="right"><strong>369.7 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>1/10</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>845.4 ms</strong></td>
+<td align="right"><strong>836.8 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>1/10</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>846.8 ms</strong></td>
+<td align="right"><strong>856.9 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Bounded</strong></td>
+<td><strong>1/1</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>351.5 ms</strong></td>
+<td align="right"><strong>352.8 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Unbounded</strong></td>
+<td><strong>1/1</strong></td>
+<td><strong>True</strong></td>
+<td align="right"><strong>319.7 ms</strong></td>
+<td align="right"><strong>319.8 ms</strong></td>
+</tr>
+</tbody>
+</table></div><footer><div>Loading...</div><div class="jsx-646394116 author"><div class="jsx-646394116 avatar"><img src="https://secure.gravatar.com/avatar/8af55ced886e9ae05831f3fafdf0e495" alt="NDPortmann - .NET / Java / Security" class="jsx-646394116"/></div><div class="jsx-646394116 note"><p><strong>Nicolas Portmann</strong> About me…</p></div></div><div class="jsx-126278577 links"></div></footer></article></main><footer class="jsx-2344609357 footer"><ul>
+<li>content by <a href="https://ndportmann.com">Nicolas Portmann</a></li>
+<li>photos by <a href="https://unsplash.com">unsplash.com</a></li>
+<li>graphic by <a href="http://www.freepik.com">starline / Freepik</a></li>
+<li>theme by <a href="http://greglobinski.com">Greg Lobinski</a></li>
+</ul></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-template-js","jsonName":"system-threading-channels-aed","path":"/system-threading-channels/"};window.dataPath="804/path---system-threading-channels-aed-774-yaJa1PCXYrXIkEY3rTZ1KvB28Yg";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app.8b1cc9920e75fff049f7.css","/app-64805dc1209e53a6e2bb.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-259b6ecbd1e38adb68b3.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-247c63988908fcf28a31.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js.b6f197430f783b3e67aa.css","/component---src-templates-post-template-js-df8ad053e0d7cf4bd966.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-037846988225d0d0f146.js"],"component---src-pages-404-js":["/component---src-pages-404-js-14d22c07ddf79bc0cef9.js"],"component---src-pages-category-js":["/component---src-pages-category-js-f6b169d904e460cc5788.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4a2daf7d475c1e09abc1.js"],"pages-manifest":["/pages-manifest-20db4328c21681b19396.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-df8ad053e0d7cf4bd966.js" async=""></script><script src="/0-1ec89199b094b9bab5df.js" async=""></script><script src="/app-64805dc1209e53a6e2bb.js" async=""></script><script src="/webpack-runtime-6e5c0af5cf1ae48a0d7a.js" async=""></script></body></html>
