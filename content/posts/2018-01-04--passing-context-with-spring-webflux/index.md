@@ -1,6 +1,6 @@
 ---
 title: Passing Context with Spring WebFlux (Part I)
-category: "Java"
+category: "java"
 cover: rawpixel-678089-unsplash.jpg
 author: nicolas portmann
 ---

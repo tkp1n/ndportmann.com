@@ -1,6 +1,6 @@
 ---
 title: Logging with Context in Spring WebFlux (Part II)
-category: "Java"
+category: "java"
 cover: markus-spiske-445253-unsplash.jpg
 author: nicolas portmann
 ---
