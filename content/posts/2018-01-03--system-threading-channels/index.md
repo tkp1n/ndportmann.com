@@ -282,26 +282,45 @@ private static async Task Consume(ChannelReader<int> c)
 ## Summary
 
 System.Threading.Channels is a highly versatile library to orchestrate pub/sub scenarios in the .NET universe asynchronously.
-It is fast enough, to dispatch 1 million messages in well under a second in most usage scenarios and does not block any thread while doing so. It's less scalable, blocking community counterpart [Disruptor-net](https://github.com/disruptor-net/Disruptor-net) is up to an order of magnitude faster in some scenarios (compare the benchmarks below with their [performance results](https://github.com/disruptor-net/Disruptor-net/wiki/Performance-Results)).
+It is fast enough, to dispatch well over 20 million messages in under a second and does not block any thread while doing so. It's blocking community counterpart [Disruptor-net](https://github.com/disruptor-net/Disruptor-net) is faster in some scenarios (compare the benchmarks below with their [performance results](https://github.com/disruptor-net/Disruptor-net/wiki/Performance-Results)).
 I am currently using Channels to sequence the writes of multiple producers to a single `PipeWriter` (from `System.IO.Pipelines`), avoiding some calls to `pipeWriter.FlushAsync` if `channel.TryRead` returns true multiple times.
 
 ## Benchmarks
 
-|          Type | Pub/Sub count | SyncCont. |           Mean |         Median |
-|-------------- |-------------- |---------- |---------------:|---------------:|
-|   **Bounded** |     **10/10** | **False** |   **778.8 ms** |   **762.7 ms** |
-| **Unbounded** |     **10/10** | **False** |   **387.0 ms** |   **378.7 ms** |
-|   **Bounded** |      **10/1** | **False** |   **524.7 ms** |   **488.7 ms** |
-| **Unbounded** |      **10/1** | **False** |   **372.0 ms** |   **354.6 ms** |
-|   **Bounded** |      **1/10** | **False** | **2,254.3 ms** | **2,287.6 ms** |
-| **Unbounded** |      **1/10** | **False** |   **179.9 ms** |   **177.4 ms** |
-|   **Bounded** |       **1/1** | **False** |   **492.7 ms** |   **503.1 ms** |
-| **Unbounded** |       **1/1** | **False** |   **289.3 ms** |   **291.1 ms** |
-|   **Bounded** |     **10/10** |  **True** |   **745.1 ms** |   **749.9 ms** |
-| **Unbounded** |     **10/10** |  **True** |   **508.6 ms** |   **524.4 ms** |
-|   **Bounded** |      **10/1** |  **True** |   **625.8 ms** |   **594.7 ms** |
-| **Unbounded** |      **10/1** |  **True** |   **381.4 ms** |   **369.7 ms** |
-|   **Bounded** |      **1/10** |  **True** |   **845.4 ms** |   **836.8 ms** |
-| **Unbounded** |      **1/10** |  **True** |   **846.8 ms** |   **856.9 ms** |
-|   **Bounded** |       **1/1** |  **True** |   **351.5 ms** |   **352.8 ms** |
-| **Unbounded** |       **1/1** |  **True** |   **319.7 ms** |   **319.8 ms** |
+> The source code for the benchmark for reproduction can be found [here](https://github.com/tkp1n/ChannelPlayground). Be aware, that the Bounded channel was sized to be able to store all messages. If the channel were undersized, the benchmarks scores would look much worse.
+
+### Multi-Publisher / Multi-Subscriber
+
+|        Type | SyncCont. | Mean (ms) | Error (ms) | StdDev (ms) |  Million messages / sec |
+|------------ |---------- |----------:|-----------:|------------:|------------------------:|
+| BoundedWait |     False |     46.40 |     0.8731 |      0.8167 |                   21.55 |
+| BoundedWait |      True |     45.22 |     0.4662 |      0.4361 |                   22.11 |
+|   Unbounded |     False |     41.07 |     0.2820 |      0.2638 |                   24.35 |
+|   Unbounded |      True |     42.13 |     0.3960 |      0.3704 |                   23.74 |
+
+### Multi-Publisher / Single-Subscriber
+
+|        Type | SyncCont. | Mean (ms) | Error (ms) | StdDev (ms) |  Million messages / sec |
+|------------ |---------- |----------:|-----------:|------------:|------------------------:|
+| BoundedWait |     False |     44.86 |     0.3109 |      0.2756 |                   22.29 |
+| BoundedWait |      True |     44.33 |     0.4621 |      0.4323 |                   22.56 |
+|   Unbounded |     False |     29.80 |     0.5915 |      0.6329 |                   33.55 |
+|   Unbounded |      True |     28.77 |     0.4965 |      0.4644 |                   34.76 |
+
+### Single-Publisher / Multi-Subscriber
+
+|        Type | SyncCont. | Mean (ms) | Error (ms) | StdDev (ms) |  Million messages / sec |
+|------------ |---------- |----------:|-----------:|------------:|------------------------:|
+| BoundedWait |     False |     45.43 |     0.7245 |      0.6777 |                   22.01 |
+| BoundedWait |      True |     45.40 |     0.4925 |      0.4366 |                   22.03 |
+|   Unbounded |     False |     41.81 |     0.2038 |      0.1907 |                   23.92 |
+|   Unbounded |      True |     42.90 |     0.2406 |      0.2251 |                   23.31 |
+
+### Single-Publisher / Single-Subscriber
+
+|        Type | SyncCont. | Mean (ms) | Error (ms) | StdDev (ms) |  Million messages / sec |
+|------------ |---------- |----------:|-----------:|------------:|------------------------:|
+| BoundedWait |     False |     45.56 |     0.4974 |      0.4653 |                   21.95 |
+| BoundedWait |      True |     44.79 |     0.3766 |      0.3339 |                   22.33 |
+|   Unbounded |     False |     28.65 |     0.4288 |      0.4011 |                   34.91 |
+|   Unbounded |      True |     28.53 |     0.2122 |      0.1985 |                   35.05 |

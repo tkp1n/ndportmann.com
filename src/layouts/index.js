@@ -141,7 +141,6 @@ class Layout extends React.Component {
                       }
                       th, td {
                         padding: 0.5em;
-                        text-align: left;
                         border-bottom: 1px solid #ddd;
                       }
                       table {
