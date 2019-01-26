@@ -90,7 +90,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 2em`
             }
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              inlineCodeMarker: "±",
+            },
+          },
           `gatsby-remark-katex`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,

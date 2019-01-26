@@ -1,6 +1,6 @@
 module.exports = {
-  siteTitle: "NDPortmann - .NET / Java / Security", // <title>
-  shortSiteTitle: "NDPortmann - .NET / Java / Security", // <title> ending for posts and pages
+  siteTitle: "Nicolas Portmann - .NET / Java / Security", // <title>
+  shortSiteTitle: "Nicolas Portmann - .NET / Java / Security", // <title> ending for posts and pages
   siteDescription: "A blog about C#, .NET, Java, InfoSec and Cryptography.",
   siteUrl: "https://ndportmann.com",
   // pathPrefix: "",
@@ -16,7 +16,7 @@ module.exports = {
   headerSubTitle: "C#, .NET, Java, InfoSec, Cryptography",
 
   /* manifest.json */
-  manifestName: "NDPortmann - .NET / Java / Security",
+  manifestName: "Nicolas Portmann - .NET / Java / Security",
   manifestShortName: "NDPortmann", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
