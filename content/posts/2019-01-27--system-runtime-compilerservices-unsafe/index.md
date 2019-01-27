@@ -235,3 +235,9 @@ Unsafe.InitBlockUnaligned(
     0x42, 
     (uint) (i * Unsafe.SizeOf<int>()));
 ```
+
+## Safety considerations
+
+Make absolutely sure you never keep a reference to memory location, that does not correspond to an obejct tracked by the GC. As an example; if you keep a reference to the element right after (out of bounds) an array, the GC can and will move that array without updating your reference!
+
+> Feel free to leave feedback, comments and questions on [reddit](https://www.reddit.com/r/dotnet/comments/akc1vv/unsafe_array_access_and_pointer_arithmetics_in_c/)
