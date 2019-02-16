@@ -67,7 +67,6 @@ There is a caveat, however. Above definition implies a `0` to be added to the fi
 Prefixing and suffixing the previous row with a `0` creates intermediate arrays (`Seq`s) which while helping simplicity surely hurts performance. 
 Directly parsing the argument to the `main` function `toInt` is of course not recommended for serious applications.
 The exact details depends on Scalas internal implementation of `scanLeft` but least two full rows of the triangle are in memory at any given point in time during execution. There sure are less memory hungry alternative approaches. They are however not that easy to reason about as the one presented above.
-It is not possible to calculate more than 68 rows with above approach (thanks [u/know_not_much](https://www.reddit.com/user/know_not_much) for making me aware of this)!
 
 ## The ugly
 
