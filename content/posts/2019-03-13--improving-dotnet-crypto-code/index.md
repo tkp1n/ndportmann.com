@@ -1,5 +1,5 @@
 ---
-title: Outperforming OpenSSL in .NET Core using AES-NI
+title: Improving the performance of .NET crypto code
 category: "crypto"
 cover: kolleen-gladden-224796-unsplash.jpg
 author: nicolas portmann
@@ -60,7 +60,7 @@ A simple enough method decrypting a given `cipherText` with a provided `key` and
 
 ![Original implementation - Profiled](original.PNG)
 
-85% of the time spent in `StreamReader`s `ReadToEnd` method! So what if we could come up with an approach that could operate on the raw bytes returned by the decryption, instead of converting it into a `string`? Well, we could save a lot of time, that's what. 
+85% of the time is spent in `StreamReader`s `ReadToEnd` method! So what if we could come up with an approach that could operate on the raw bytes returned by the decryption, instead of converting it into a `string`? Well, we could save a lot of time, that's what. 
 
 ## Initial improvements
 
@@ -74,7 +74,7 @@ static void Decrypt(byte[] cipherText, byte[] plaintext, byte[] key, byte[] iv)
 }
 ```
 
-The check if the resulting `plaintext` contains the word "trust" was simple enough, using the highly optimized methods provided on `Span<byte>`.
+The check if the resulting `plaintext` contains the word "trust" is now no longer possible via `String.Contains` but still simple enough, using the highly optimized methods provided on `Span<byte>`.
 
 ```csharp
 private static ReadOnlySpan<byte> trust => 
@@ -88,4 +88,4 @@ With all of that in place, I re-ran the tool again with the profiler attached an
 
 ![No conversion - Profiled](no_convert.PNG)
 
-So I was happy for the day and opened a [PR](https://github.com/ronnieholm/Playground/pull/1). Who knew, that I couldn't just let it be like that... but more on that, in the next part.
+So I was happy for the day and opened a [PR](https://github.com/ronnieholm/Playground/pull/1) but I also realized, that the frameworks AES implementation isn't really designed to perform crypto operations on relatively small messages using constantly changing keys. The next post of this series will focus on how to work around exactly that issue.
