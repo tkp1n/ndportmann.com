@@ -5,7 +5,7 @@ cover: kolleen-gladden-224796-unsplash.jpg
 author: nicolas portmann
 ---
 
-> This is the first (and maybe least interesting) post of a small series on AES-NI and .NET Core hardware intrinsics. Please be patient for the next post, which starts to take a deep dive into AES-NI. This one is more about efficiently using the existing crypto APIs in .NET. (I'll add links to the follow-up posts as soon as they are ready)
+> This is the first (and maybe least interesting) post of a small series on AES-NI and .NET Core hardware intrinsics. The [next post](https://ndportmann.com/aes-ni-key-expansion/) starts to take a deep dive into AES-NI. This one is more about efficiently using the existing crypto APIs in .NET.
 
 ## Motivation
 
@@ -88,4 +88,4 @@ With all of that in place, I re-ran the tool again with the profiler attached an
 
 ![No conversion - Profiled](no_convert.PNG)
 
-So I was happy for the day and opened a [PR](https://github.com/ronnieholm/Playground/pull/1) but I also realized, that the frameworks AES implementation isn't really designed to perform crypto operations on relatively small messages using constantly changing keys. The next post of this series will focus on how to work around exactly that issue.
+So I was happy for the day and opened a [PR](https://github.com/ronnieholm/Playground/pull/1) but I also realized, that the frameworks AES implementation isn't really designed to perform crypto operations on relatively small messages using constantly changing keys. The [next post](https://ndportmann.com/aes-ni-key-expansion/) of this series focuses on how to work around exactly that issue.
