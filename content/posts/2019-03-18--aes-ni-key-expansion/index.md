@@ -67,6 +67,6 @@ Aes.Decrypt(input, output, iv, key, CipherMode.CBC, PaddingMode.None);
 
 ## Performance results
 
-Creating $16^6$ `ICryptoTransform` instances takes 16'318ms (as shown in the last post). The managed AES-NI based implementation introduced in this post requires only 1'912ms to perform $16^6$ key expansions. An ~8.5x improvement!
+Creating $16^6$ `ICryptoTransform` instances takes 16'318ms (as shown in the last post). The managed AES-NI based implementation introduced in this post requires only 684ms to perform $16^6$ key expansions. A ~23x improvement!
 
 The next post will introduce the actual encryption and decryption operations using AES-NI in C# and showcase the final performance result of the complete implementation of the brute-force attack using .NET hardware intrinsics.
