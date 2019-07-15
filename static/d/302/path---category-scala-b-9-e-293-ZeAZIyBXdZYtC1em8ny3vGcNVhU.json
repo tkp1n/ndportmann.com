@@ -1,1 +1,0 @@
-{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/pascals-triangle/"},"excerpt":"As part of a recent job interview process I was asked to provide an implementation of pascal’s triangle in Scala. I think","timeToRead":1,"frontmatter":{"title":"Pascal's triangle","category":"scala"}}}]}},"pageContext":{"category":"scala"}}

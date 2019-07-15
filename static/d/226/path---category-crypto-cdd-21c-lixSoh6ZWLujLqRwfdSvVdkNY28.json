@@ -1,1 +1,0 @@
-{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/aes-ni-system-runtime-intrinsics/"},"excerpt":"Motivation So I was researching AES New Instructions (AES-NI) and the ","timeToRead":1,"frontmatter":{"title":"Beating the frameworks encryption performance using AES-NI","category":"crypto"}}}]}},"pageContext":{"category":"crypto"}}
