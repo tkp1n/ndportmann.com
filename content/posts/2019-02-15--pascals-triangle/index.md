@@ -7,7 +7,7 @@ author: nicolas portmann
 
 ## The challenge
 
-```   
+```
     1
    1 1
   1 2 1
