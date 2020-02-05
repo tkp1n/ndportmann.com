@@ -6,7 +6,7 @@
 <url> <loc>https://ndportmann.com/category/crypto/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ndportmann.com/category/scala/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ndportmann.com/category/java/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://ndportmann.com/io_uring-basics/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ndportmann.com/io_uring-rationale/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ndportmann.com/load-balancing-perf/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ndportmann.com/chrome-in-docker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ndportmann.com/breaking-records-with-core-3-0/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
