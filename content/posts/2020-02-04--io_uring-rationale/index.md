@@ -39,7 +39,7 @@ This series is, therefore, a documentation of the journey towards building yet a
 
 ## Why is `io_uring` significant?
 
-### The cost of syscalls
+### The Cost of syscalls
 
 Ren et al. discovered in their 2019 paper *[An Analysis of Performance Evolution of Linux’s Core Operations](https://dl.acm.org/doi/pdf/10.1145/3341301.3359640?download=true)* that the cost of syscalls such as `mmap`, `read`, `write` have gone up significantly in recent times. The 11 root causes responsible for the slowdown fall in one of three categories:
 
