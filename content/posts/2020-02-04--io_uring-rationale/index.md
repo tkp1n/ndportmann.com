@@ -7,7 +7,7 @@ author: nicolas portmann
 
 In this series, we are going to explore what it takes to develop an `io_uring`-based Transport layer for .NET. But before we are getting down to the nitty-gritty, we should think about whether this endeavor is a good idea to begin with.
 
-If you are writing network code for a living or are otherwise familiar with the topic, by all means, skip this episode and come back for the next one, once it's ready.
+If you are writing network code for a living or are otherwise familiar with the topic, by all means, skip this episode and check out [the next one](https://ndportmann.com/io_uring-foundation/).
 
 ## What is a Transport Layer?
 
@@ -67,7 +67,7 @@ If you are used to the BCL, Linux I/O APIs are rarely easy to consume. This is e
 
 `liburing` offers convenience methods for each operation supported by `io_uring`. While being convenient, this would mean a lot of P/Invoked methods in the Transport layer should we decide to leverage `liburing`. With the license of `liburing` [changed to MIT](https://github.com/axboe/liburing/commit/b9f507d50c71b27f5c0239a28fa29db5ce2bf533), it was relatively easy to reverse engineer it and to write a similar but managed library: [IoUring](https://github.com/tkp1n/IoUring/#iouring).
 
-IoUring builds the foundation upon which the IoUring.Transport is built - a foundation which we explore in detail, in the next episode of this series.
+IoUring builds the foundation upon which the IoUring.Transport is built - a foundation which we explore in detail, in [the next episode](https://ndportmann.com/io_uring-foundation/) of this series.
 
 ## Summary
 

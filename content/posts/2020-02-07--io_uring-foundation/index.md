@@ -38,7 +38,7 @@ Describing the `epoll` interface in detail is too much for the scope of this epi
 
 ## Reducing the Number of Syscalls
 
-In the last episode, we established some levers we can pull to optimize the performance of networking code. One of those is the reduction of syscalls. The rationale behind this is the cost associated with invoking syscalls. Again, check out the [previous episode](https://ndportmann.com/io_uring-rationale/) for more details on this.
+In [the last episode](https://ndportmann.com/io_uring-rationale/), we established some levers we can pull to optimize the performance of networking code. One of those is the reduction of syscalls. The rationale behind this is the cost associated with invoking syscalls. Again, check out the [previous episode](https://ndportmann.com/io_uring-rationale/) for more details on this.
 
 The community introduced `libaio` (AIO) to tackle this problem. The new syscalls behind AIO can be used to submit multiple socket operations at once (`io_submit`) and to get the results for completed operations with another syscall `io_getevents`. Unfortunately, AIO didn't solve all our problems. `io_submit` can (sometimes) block, and performance overall isn't great. See this [presentation from Jens Axboe](https://www.youtube.com/watch?v=-5T4Cjw46ys) for more hints in this direction.
 
