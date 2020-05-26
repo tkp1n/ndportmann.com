@@ -15,4 +15,4 @@
 
 ## Publish
 
-- Run `npm run deploy`
+- Push to `master` - GitHub Actions will publish
