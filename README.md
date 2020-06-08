@@ -1,9 +1,9 @@
 ## Prep
 
-- Use Ubuntu (WSL works)
-- Install node [from here](https://github.com/nodesource/distributions/blob/master/README.md#deb)
-- Run `sudo apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev libglu1 libxi6 libgconf-2-4`
+- Use Ubuntu 20.04 (WSL works)
+- Run `sudo apt install nodejs npm`
 - Run `sudo npm i -g gatsby`
+- Run `sudo npm install`
 
 ## Mem hack (useful on macOS)
 
