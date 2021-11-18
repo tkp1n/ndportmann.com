@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <meta name="description" content="A Software Engineering Blog">
+        <meta property="og:url" content="https://ndportmann.com{{ page.url }}">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="A blog about software engineering and applied cryptography.">
+        <meta property="og:type" content="article">
+        <meta name="twitter:site" content="@tkp1n">
+        <meta name="twitter:creator" content="@tkp1n">
+        <meta name="twitter:card" content="summary">
+        <style>
+            {% set css %}
+                {% include "../base.css" %}
+                {% include "../styles.css" %}
+                {% include "../node_modules/prismjs/themes/prism-okaidia.css" %}
+                {% include "../node_modules/katex/dist/katex.min.css" %}
+                .header h1 {
+                    margin-top: 0;
+                    font-size: var(--size-4_5);
+                    line-height: var(--size-7);
+                }
+                @media(min-width: 1024px) {
+                    .header h1 {
+                        font-size: var(--size-5);
+                    }
+                }
+                .sub {
+                    font-size: var(--size-4);
+                    line-height: var(--size-6);
+                    font-weight: var(--weight-extralight);
+                    height: var(--size-6);
+                }                
+                .sub span {
+                    animation: fade 10s linear infinite 0s;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                }
+                .sub span:nth-child(2) {
+                    animation-delay: 2.5s;
+                }
+                .sub span:nth-child(3) {
+                    animation-delay: 5s;
+                }
+                .sub span:nth-child(4) {
+                    animation-delay: 7.5s;
+                }
+                @media(min-width: 1024px) {
+                    .sub {
+                        font-size: var(--size-4_5);
+                        line-height: var(--size-7);
+                    }
+                }
+                @keyframes fade {
+                    0% { opacity: 0; }
+                    5% { opacity: 0; }
+                    10% { opacity: 1; }
+                    25% { opacity: 1; }
+                    30% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+                .outer {
+                    margin-top: var(--size-8);
+                    background-color: var(--blue-600);
+                    transform: skewY(6deg);
+                    width: 66.666667%;
+                    max-width: var(--size-xs);
+                    min-width: -webkit-min-content;
+                    min-width: min-content;
+                }
+                @media(min-width: 1024px) {
+                    .outer {
+                        max-width: var(--size-md);
+                    }
+                }
+                .inner {
+                    padding: var(--size-2);
+                    background-color: var(--white);
+                    transform: skewY(-6deg);
+                    width: 80%;
+                }
+                /**/
+                header > h1 {
+                    font-size: var(--size-6);
+                    line-height: var(--size-8);
+                    margin-top: var(--size-7);
+                }
+                @media(min-width: 1024px) {
+                    header > h1 {
+                        font-size: var(--size-7);
+                        line-height: var(--size-9);
+                    }
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-left: 0;
+                }
+                .content {
+                    max-width: 768px;
+                    margin-top: var(--size-6);
+                    padding-right: var(--size-5);
+                    padding-left: var(--size-5);
+                }
+                .text {
+                    margin-top: var(--size-2);
+                    font-size: var(--size-4);
+                }
+                .text p {
+                    padding-top: var(--size-4);
+                }
+                .text a {
+                    color: var(--blue-600);
+                }
+                .text a:hover {
+                    text-decoration: underline;
+                }
+                .text pre {
+                    margin-top: var(--size-1);
+                    margin-bottom: var(--size-1);
+                }
+                .text table {
+                    table-layout: auto;
+                    width: 100%;
+                    margin-top: var(--size-2);
+                    margin-bottom: var(--size-2);
+                }
+                .text tr {
+                    border-bottom-width: 1px;
+                }
+                .text td {
+                    padding: var(--size-1_5);
+                }
+                :not(a) > code {
+                    border-radius: var(--size-1);
+                    padding: var(--size-0_5);
+                    background-color: var(--gray-200);
+                }
+                .text blockquote > p {
+                    padding-top: 0;
+                }
+                footer {
+                    padding-top: var(--size-4);
+                    padding-bottom: var(--size-2);
+                    width: 100%;
+                    text-align: center;
+                }
+            {% endset %}
+            {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        <a href="/" class="header">
+            <div class="outer shadow rounded mx-auto">
+                <div class="inner shadow rounded mx-auto">
+                    <header>
+                        <h1>Nicolas Portmann</h1>
+                        <div class="sub">
+                            <span>Software Engineering</span>
+                            <span>Security Engineering</span>
+                            <span>Applied Cryptography</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </a>
+        <div class="content container mx-auto">
+            <main>
+                <header>
+                    <h1>{{ title }}</h1>
+                    <p>
+                        {% from 'tags.njk' import tags %}
+                        {{ tags(page.inputPath | postDate , author, category) }}
+                    </p>
+                </header>
+                <article class="text">
+                    {{ content | safe }}
+                </article>
+            </main>
+        </div>
+        <footer>
+            <p>&#169; Nicolas Portmann</p>
+        </footer>
+    </body>
+</html>

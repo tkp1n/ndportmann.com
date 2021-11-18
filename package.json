@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Blog by Nicolas Portmann",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkp1n/ndportmann.com.git"
+  },
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "author": "Nicolas Portmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkp1n/ndportmann.com/issues"
+  },
+  "homepage": "https://github.com/tkp1n/ndportmann.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0-beta.5",
+    "@11ty/eleventy-img": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
+    "clean-css": "^5.2.2",
+    "markdown-it-katex": "^2.0.3",
+    "node-html-parser": "^5.1.0"
+  }
+}
