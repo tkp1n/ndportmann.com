@@ -18,6 +18,7 @@
     --size-md: 28rem;
     --weight-extralight: 200;
     --weight-light: 300;
+    --weight-bitbold: 400;
     --weight-semibold: 600;
     --blue-500: rgba(59, 130, 246, 1);
     --blue-600: rgba(37, 99, 235, 1);
@@ -141,8 +142,12 @@ h4 {
     width: var(--size-5);
     height: var(--size-5);
     margin-bottom: var(--size-1);
-    margin-right: var(--size-1);
     display: inline;
+}
+
+.tag {
+    padding-right: var(--size-3);
+    white-space:nowrap;
 }
 
 pre {
@@ -151,10 +156,21 @@ pre {
 
 ul {
     list-style: disc;
-    padding-left: var(--size-4);
+    padding-left: var(--size-4_5);
 }
 
 ol {
     list-style: decimal;
-    padding-left: var(--size-4);
+    padding-left: var(--size-4_5);
+}
+
+blockquote {
+    margin-top: 1rem; 
+    padding-left: 1rem;
+    border-left: 4px solid #dadada;
+}
+
+th  {
+    text-align: start;
+    font-weight: var(--weight-bitbold);
 }
