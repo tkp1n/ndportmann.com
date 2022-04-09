@@ -176,10 +176,8 @@
             <main>
                 <header>
                     <h1>{{ title }}</h1>
-                    <p>
-                        {% from 'tags.njk' import tags %}
-                        {{ tags(page.inputPath | postDate , author, category) }}
-                    </p>
+                    {% from 'tags.njk' import tags %}
+                    {{ tags(page.inputPath | postDate , author, category) }}
                 </header>
                 <article class="text">
                     {{ content | safe }}
