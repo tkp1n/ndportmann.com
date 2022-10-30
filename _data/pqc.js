@@ -40,6 +40,11 @@ module.exports = [
         link: 'https://csrc.nist.gov/publications/detail/sp/800-208/final'
     },
     {
+        title: '2020/9/7',
+        body: 'NSA releases PQ-resistant Commercial National Security Algorithm Suite 2.0',
+        link: 'https://media.defense.gov/2022/Sep/07/2003071834/-1/-1/0/CSA_CNSA_2.0_ALGORITHMS_.PDF'
+    },
+    {
         title: '2020/7/22',
         body: 'NIST announces round 3 PQC candidates (7 Finalists and 8 Alternates).',
         link: 'https://csrc.nist.gov/News/2020/pqc-third-round-candidate-announcement'
@@ -63,6 +68,16 @@ module.exports = [
         title: '2016/02/24',
         body: 'NIST calls for proposals of quantum-resistant cryptographic algorithms.',
         link: 'https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/pqcrypto-2016-presentation.pdf'
+    },
+    {
+        title: '2015/8/15',
+        body: 'NSA advises against migrating to Suite B but instead to prepare for the upcoming quantum resistant algorithm transition.',
+        link: 'https://web.archive.org/web/20150815072948/https://www.nsa.gov/ia/programs/suiteb_cryptography/index.shtml'
+    },
+    {
+        title: '2014/1/2',
+        body: 'Documents leaked by Sonwden indicate NSA funded efforts to build a cryptologically useful quantum computer.',
+        link: 'https://www.washingtonpost.com/world/national-security/nsa-seeks-to-build-quantum-computer-that-could-crack-most-types-of-encryption/2014/01/02/8fff297e-7195-11e3-8def-a33011492df2_story.html'
     },
     {
         title: '1998/04/13',
