@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+{% set title = "PQC Timeline" %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <meta name="description" content="A Software Engineering Blog">
+        <meta property="og:url" content="https://ndportmann.com{{ page.url }}">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="A blog about software engineering and applied cryptography.">
+        <meta property="og:type" content="article">
+        <meta name="twitter:site" content="@tkp1n">
+        <meta name="twitter:creator" content="@tkp1n">
+        <meta name="twitter:card" content="summary">
+        <style>
+            {% set css %}
+                {% include "../base.css" %}
+                {% include "../styles.css" %}
+                .header h1 {
+                    margin-top: 0;
+                    font-size: var(--size-4_5);
+                    line-height: var(--size-7);
+                }
+                @media(min-width: 1024px) {
+                    .header h1 {
+                        font-size: var(--size-5);
+                    }
+                }
+                .sub {
+                    font-size: var(--size-4);
+                    line-height: var(--size-6);
+                    font-weight: var(--weight-extralight);
+                    height: var(--size-6);
+                }                
+                .sub span {
+                    animation: fade 10s linear infinite 0s;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                }
+                .sub span:nth-child(2) {
+                    animation-delay: 2.5s;
+                }
+                .sub span:nth-child(3) {
+                    animation-delay: 5s;
+                }
+                .sub span:nth-child(4) {
+                    animation-delay: 7.5s;
+                }
+                @media(min-width: 1024px) {
+                    .sub {
+                        font-size: var(--size-4_5);
+                        line-height: var(--size-7);
+                    }
+                }
+                @keyframes fade {
+                    0% { opacity: 0; }
+                    5% { opacity: 0; }
+                    10% { opacity: 1; }
+                    25% { opacity: 1; }
+                    30% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+                .outer {
+                    margin-top: var(--size-8);
+                    background-color: var(--blue-600);
+                    transform: skewY(6deg);
+                    width: 66.666667%;
+                    max-width: var(--size-xs);
+                    min-width: -webkit-min-content;
+                    min-width: min-content;
+                }
+                @media(min-width: 1024px) {
+                    .outer {
+                        max-width: var(--size-md);
+                    }
+                }
+                .inner {
+                    padding: var(--size-2);
+                    background-color: var(--white);
+                    transform: skewY(-6deg);
+                    width: 80%;
+                }
+                header > h1 {
+                    font-size: var(--size-6);
+                    line-height: var(--size-8);
+                    margin-top: var(--size-7);
+                }
+                @media(min-width: 1024px) {
+                    header > h1 {
+                        font-size: var(--size-7);
+                        line-height: var(--size-9);
+                    }
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-left: 0;
+                }
+                .content {
+                    max-width: 768px;
+                    margin-top: var(--size-6);
+                    padding-right: var(--size-5);
+                    padding-left: var(--size-5);
+                }
+                .text {
+                    margin-top: var(--size-2);
+                    font-size: var(--size-4);
+                }
+                footer {
+                    padding-top: var(--size-4);
+                    padding-bottom: var(--size-2);
+                    width: 100%;
+                    text-align: center;
+                }
+
+
+                .timeline {
+                    position: relative;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+                .timeline::after {
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    background-color: var(--gray-500);
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -3px;
+                }
+                .entry {
+                    position: relative;
+                    background-color: inherit;
+                    width: 50%;
+                }
+                .entry::after {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    background-color: white;
+                    border: 4px solid var(--blue-600);
+                    top: 15px;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                .left {
+                    padding: 10px 40px 10px 10px;
+                    left: 0;
+                }
+                .right {
+                    padding: 10px 10px 10px 40px;
+                    left: 50%;
+                }
+                .left::before {
+                    content: " ";
+                    height: 0;
+                    position: absolute;
+                    top: 18px;
+                    width: 0;
+                    z-index: 1;
+                    right: 30px;
+                    border: medium solid var(--gray-200);
+                    border-width: 10px 0 10px 10px;
+                    border-color: transparent transparent transparent var(--gray-200);
+                }
+                .right::before {
+                    content: " ";
+                    height: 0;
+                    position: absolute;
+                    top: 18px;
+                    width: 0;
+                    z-index: 1;
+                    left: 30px;
+                    border: medium solid var(--gray-200);
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent var(--gray-200) transparent transparent;
+                }
+                .left::after {
+                    right: -13px;
+                }
+                .right::after {
+                    left: -12px;
+                }
+                .entry-content {
+                    padding: 10px 20px;
+                    position: relative;
+                }
+                .entry-content > h2 {
+                    margin-top: 0;
+                }
+                @media screen and (max-width: 600px) {
+                    .timeline::after {
+                        left: 31px;
+                    }
+                    .entry {
+                        width: 100%;
+                        padding-left: 70px;
+                        padding-right: 25px;
+                    }
+                    .entry::before {
+                        left: 60px;
+                        border: medium solid var(--gray-200);
+                        border-width: 10px 10px 10px 0;
+                        border-color: transparent var(--gray-200) transparent transparent;
+                    }
+                    .left::after, .right::after {
+                        left: 18.5px;
+                    }
+                    .right {
+                        left: 0%;
+                    }
+                }
+
+            {% endset %}
+            {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        <a href="/" class="header">
+            <div class="outer shadow rounded mx-auto">
+                <div class="inner shadow rounded mx-auto">
+                    <header>
+                        <h1>Nicolas Portmann</h1>
+                        <div class="sub">
+                            <span>Software Engineering</span>
+                            <span>Security Engineering</span>
+                            <span>Applied Cryptography</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </a>
+        <div class="content container mx-auto">
+            <main>
+                <header>
+                    <h1>{{ title }}</h1>
+                    {% from 'tags.njk' import tags %}
+                    {{ tags((pqc | first).title, 'Nicolas Portmann', 'pqc') }}
+                </header>
+                <article class="text">
+
+                    <div class="timeline">
+                    {% for pqcEntry in pqc %}
+                        {% if loop.index0 % 2 == 0 %}
+                        <div class="entry left">
+                        {% else %}
+                        <div class="entry right">
+                        {% endif %}
+                            <a href="{{ pqcEntry.link }}" target="_blank" rel="noopener noreferrer">
+                                <div class="entry-content shadow rounded mx-auto">
+                                    <h2>{{ pqcEntry.title }}</h2>
+                                    <p>{{ pqcEntry.body }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </article>
+            </main>
+        </div>
+        <footer>
+            <p>&#169; Nicolas Portmann</p>
+        </footer>
+    </body>
+</html>

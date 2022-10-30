@@ -27,7 +27,7 @@ To quantify the threat posed by quantum algorithms, we need metrics to measure a
 
 ### Logical vs. Physical Qubits
 
-Manufacturers of quantum computers like to advertise with big numbers. The latest IBM quantum computer packs 127 qubits [[IBM21]](https://newsroom.ibm.com/2021-11-16-IBM-Unveils-Breakthrough-127-Qubit-Quantum-Processor). They are, however, prone to error and not directly useful in the business of breaking cryptographic algorithms. To satisfy quantum algorithms, we need clean, error-corrected "logical qubits". Many (~13 [[ED+21]](https://arxiv.org/pdf/2009.11482.pdf)) physical qubits can be arranged to encode one logical qubit. A quantum algorithm's requirements in space are measured in logical qubits, while quantum computer marketing material usually refers to physical qubits.
+Manufacturers of quantum computers like to advertise with big numbers. The latest IBM quantum computer packs 127 qubits [[IBM21]](https://newsroom.ibm.com/2021-11-16-IBM-Unveils-Breakthrough-127-Qubit-Quantum-Processor). They are, however, prone to error and not directly useful in the business of breaking cryptographic algorithms. To satisfy quantum algorithms, we need clean, error-corrected "logical qubits". Many physical qubits can be arranged to encode one logical qubit [[ED+21]](https://arxiv.org/pdf/2009.11482.pdf). Recent estimates indicate that 20 million physical [[GE19]](https://arxiv.org/abs/1905.09749v2) (or 4096 logical [[HRS17]](https://arxiv.org/pdf/1611.07995.pdf)) qubits are required to break RSA-2048. A quantum algorithm's requirements in space are measured in logical qubits, while quantum computer marketing material usually refers to physical qubits.
 
 ### Gate depth
 

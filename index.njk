@@ -120,6 +120,19 @@
                     transform: skewY(-6deg);
                     width: 80%;
                 }
+                /* PQC */
+                .pqc {
+                    display: flex;
+                    flex-direction: column;
+                }
+                @media(min-width: 1024px) {
+                    .pqc {
+                        flex-direction: row;
+                    }
+                }
+                .pqc h3 {
+                    margin-top: 0;
+                }
                 /* featured work */
                 .projects {
                     display: flex;
@@ -138,7 +151,7 @@
                     display: flex;
                     flex-direction: column;
                 }
-                .card h3 {
+                .projects h3 {
                     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
                     font-size: var(--size-4_5);
                     line-height: var(--size-7);
@@ -357,6 +370,23 @@
                     </header>
                 </div>
             </div>
+            <section>
+                <h2>Post-Quantum Cryptography</h2>
+                <div class="pqc">
+                    <article class="card rounded shadow">
+                     <a href="pqc">
+                        <h3>PQC Timeline</h3>
+                        <p class="subtext">An chronological overview of important events in the history of post-quantum cryptography</p>
+                    </a>
+                </article>
+                    <article class="card rounded shadow">
+                     <a href="quantifying-the-quantum-threat">
+                        <h3>Quantifying the Quantum Threat</h3>
+                        <p class="subtext">A summary of the projected quantum resources required to break classical cryptography</p>
+                    </a>
+                </article>
+                </div>
+            </section>
             <section>
                 <h2>Featured Work</h2>
                 <div class="projects">
