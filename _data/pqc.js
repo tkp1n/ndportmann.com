@@ -80,9 +80,19 @@ module.exports = [
         link: 'https://www.washingtonpost.com/world/national-security/nsa-seeks-to-build-quantum-computer-that-could-crack-most-types-of-encryption/2014/01/02/8fff297e-7195-11e3-8def-a33011492df2_story.html'
     },
     {
+        title: '2008/11/19',
+        body: 'Harrow, Hassidim and Lloyd develop a quantum algorithm for solving systems of linear equations with an possible exponential speedup over the known classical algorithm',
+        link: 'https://arxiv.org/abs/0811.3171'
+    },
+    {
         title: '1998/04/13',
         body: 'First experimental demonstration of a quantum algorithm on a 2-qubit quantum computer.',
         link: 'https://doi.org/10.1103/PhysRevLett.80.3408'
+    },
+    {
+        title: '1996/5/29',
+        body: 'Lov Grover develops a quantum search algorithm with a quadratic speedup compared to the best classical algorithm.',
+        link: 'https://arxiv.org/abs/quant-ph/9605043'
     },
     {
         title: '1994/11/22',
