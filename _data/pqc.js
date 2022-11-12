@@ -55,6 +55,11 @@ module.exports = [
         link: 'https://www.nature.com/articles/s41586-019-1666-5'
     },
     {
+        title: '2019/6/20',
+        body: 'Cloudflare experiments with SIKE and HRSS-SXY.',
+        link: 'https://blog.cloudflare.com/towards-post-quantum-cryptography-in-tls'
+    },
+    {
         title: '2019/1/30',
         body: 'NIST announces round 2 PQC candidates (26 algorithms).',
         link: 'https://csrc.nist.gov/news/2019/pqc-standardization-process-2nd-round-candidates'
@@ -63,6 +68,11 @@ module.exports = [
         title: '2017/12/21',
         body: 'NIST announces round 1 PQC candidates (69 algorithms).',
         link: 'https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/Round-1-Submissions'
+    },
+    {
+        title: '2016/7/7',
+        body: 'Google experiments with post-quantum cryptography.',
+        link: 'https://security.googleblog.com/2016/07/experimenting-with-post-quantum.html'
     },
     {
         title: '2016/02/24',
