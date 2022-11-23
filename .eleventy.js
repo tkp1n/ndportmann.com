@@ -28,10 +28,26 @@ module.exports = function (eleventyConfig) {
     "md",
     "css"
   ]);
+  
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/prismjs/themes/prism-okaidia.min.css": "prism-okaidia.min.css"
+  });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/katex/dist/katex.min.css": "katex.min.css"
+  });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/katex/dist/fonts": "fonts"
+  });
 
   const md = require("markdown-it")();
-  const katex = require("markdown-it-katex");
   md.use(require("markdown-it-katex"));
+  md.use(require('markdown-it-multimd-table'), {
+    multiline:  true,
+    rowspan:    true,
+    headerless: false,
+    multibody:  false,
+    autolabel:  false,
+  });
 
   eleventyConfig.setLibrary("md", md);
 

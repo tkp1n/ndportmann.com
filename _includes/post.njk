@@ -17,7 +17,6 @@
                 {% include "../base.css" %}
                 {% include "../styles.css" %}
                 {% include "../node_modules/prismjs/themes/prism-okaidia.css" %}
-                {% include "../node_modules/katex/dist/katex.min.css" %}
                 .header h1 {
                     margin-top: 0;
                     font-size: var(--size-4_5);
@@ -154,6 +153,8 @@
             {% endset %}
             {{ css | cssmin | safe }}
         </style>
+        <link rel="stylesheet" href="../prism-okaidia.min.css">
+        <link rel="stylesheet" href="../katex.min.css">
     </head>
     <body>
         <a href="/" class="header">

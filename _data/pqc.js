@@ -106,6 +106,11 @@ module.exports = [
     },
     {
         title: '1994/11/22',
+        body: 'D.R. Simon discovers a quantum period finding algorithm invalidating our current MAC schemes and modes of operation on quantum computers.',
+        link: 'https://ieeexplore.ieee.org/document/365701'
+    },
+    {
+        title: '1994/11/22',
         body: 'Peter Shor develops a polynominal time algorithm for discrete logarithm and factoring on quantum computers.',
         link: 'https://ieeexplore.ieee.org/document/365700'
     }
